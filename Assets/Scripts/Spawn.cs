@@ -21,10 +21,15 @@ public class Spawn : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Invoke("bunish", 1);
+        if(collision.gameObject.tag == "Target")
+        {
+            Counter.HitCount++;
+            Debug.Log(Counter.HitCount+" Hit");
+        }
+        Invoke("vanish", 1);
     }
 
-    void bunish()
+    void vanish()
     {
         //GameObject ball = Instantiate(this.gameObject, new Vector3(0, 0.20001f, -8.0f), Quaternion.identity);
         Destroy(this.gameObject);

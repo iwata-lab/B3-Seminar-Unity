@@ -23,7 +23,7 @@ public class move : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Space))
         { 
             bullet.SetActive(true);
-            Vector3 bulletposition = GameObject.Find("Gan").transform.position + new Vector3(0, 0, 0.9f);
+            Vector3 bulletposition = GameObject.Find("Gun").transform.position + new Vector3(0, 0, 0.9f);
             GameObject randomtarget = Instantiate(bullet, bulletposition, Quaternion.identity);
             bullet.SetActive(false);
         }
@@ -63,7 +63,7 @@ public class move : MonoBehaviour
                 Debug.Log("right");
             }
         }
-        if (judge == true)
+        if (judge)
         {
             if (Input.GetKeyDown(KeyCode.Z))
             {
