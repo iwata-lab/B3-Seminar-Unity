@@ -63,6 +63,7 @@ public class move : MonoBehaviour
                 Debug.Log("right");
             }
         }
+        
         if (judge)
         {
             if (Input.GetKeyDown(KeyCode.Z))
