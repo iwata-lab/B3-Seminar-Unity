@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class RandomTarget : MonoBehaviour
 {
-    float positionX;
-    float positionY;
-    float positionZ;
-    float timeleft;
+    private float positionX;
+    private float positionY;
+    private float positionZ;
+    private float timeleft;
 
     public GameObject target;
 

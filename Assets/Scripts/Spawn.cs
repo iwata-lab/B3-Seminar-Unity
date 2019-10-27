@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Spawn : MonoBehaviour
 {
-    Rigidbody rigidbody;
+    private Rigidbody rigidbody;
 
     // Start is called before the first frame update
     void Start()
@@ -29,9 +29,8 @@ public class Spawn : MonoBehaviour
         Invoke("vanish", 1);
     }
 
-    void vanish()
+    private void vanish()
     {
-        //GameObject ball = Instantiate(this.gameObject, new Vector3(0, 0.20001f, -8.0f), Quaternion.identity);
         Destroy(this.gameObject);
     }
 }

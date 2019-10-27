@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class move : MonoBehaviour
 {
-    Rigidbody rigidbody;
+    private Rigidbody rigidbody;
 
     public GameObject bullet;
 
-    bool judge = true;
+    private bool judge = true;
 
     // Start is called before the first frame update
     void Start()
@@ -30,11 +30,11 @@ public class move : MonoBehaviour
         
             if (Input.GetKey(KeyCode.UpArrow))
             {
-                if (this.transform.position.z <= -5)
-                {
+                /*if (this.transform.position.z <= -5)
+                {*/
                     this.gameObject.transform.position += new Vector3(0.0f, 0.0f, 0.1f);
                     Debug.Log("front");
-                }
+                //}
             }
 
             if (Input.GetKey(KeyCode.DownArrow))
@@ -75,7 +75,7 @@ public class move : MonoBehaviour
         }
     }
 
-    void Judge()
+    private void Judge()
     {
         judge = true;
     }

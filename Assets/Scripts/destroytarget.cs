@@ -17,13 +17,8 @@ public class destroytarget : MonoBehaviour
         Invoke("destroy", 6);
     }
 
-    void destroy()
+    private void destroy()
     {
         Destroy(this.gameObject);
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        
     }
 }
