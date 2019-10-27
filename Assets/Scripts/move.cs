@@ -30,11 +30,11 @@ public class move : MonoBehaviour
         
             if (Input.GetKey(KeyCode.UpArrow))
             {
-                /*if (this.transform.position.z <= -5)
-                {*/
+                if (this.transform.position.z <= -5)
+                {
                     this.gameObject.transform.position += new Vector3(0.0f, 0.0f, 0.1f);
                     Debug.Log("front");
-                //}
+                }
             }
 
             if (Input.GetKey(KeyCode.DownArrow))
